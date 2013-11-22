@@ -1,0 +1,93 @@
+NAME OF INSTRUCTION	OPCODE-NAME/SYNTAX	DESCRIPTION									EXAMPLE
+---------------------	----------		--------------								---------------------      		
+
+Move Instruction	move vx,vy		Moves the content of vy	move v0,v1
+						into vx. Both registers must						Move v1 into v0.
+						be in the 1st 256 register
+						range.	
+
+			move-object vx,vy	Moves the object reference 						move-object v1,v8
+						from vy to vx.							Move the object reference in v8 to v1.
+
+			move-result vx		Move the result value of the						move-result v0
+						previous method invocation					Move the return vale of a previous method
+						into vx.							invocation into v0.
+
+
+Return Instruction	return vx		Return with vx return value.						return v0
+														Returns with return value in v0.
+
+			return-wide vx		Return with double/long 						return-wide v0
+						result in vx,vx+1.						Returns with a double/long value in v0,v1.
+			
+			return-object vx	Return with vx object return						return-object v0 
+.						value.								Return with object reference value in v0.
+
+Const Instruction	const/4 vx,lit4		Puts the 4 bit constant into						const/4 v1,#int2
+						vx. 								Moves literal 2 into v1. The Destination 
+														register is in the lower 4 bit in the second
+														byte, the literal 2 is in the higher 4 bit.
+
+Compare Instruction	cmpl-float		Compares the float values in						cmpl-float v0, v6, v7
+						vy & vz & sets the integer					Compares the float values in v6 and v7 
+						value in vx accordingly.					then sets v0 accordingly. NaN bias is 
+														less-than, the instruction will return -1 
+														if any of the parameters is NaN.
+			
+			cmpl-double vx,vy,vz	Compares the double values						cmpl-double v25, v6, v8 
+						in vy & vz2 & sets the integer					Compares the double values in v6,v7 
+						 value in vx accordingly.	 				and v8,v9 and sets v25 accordingly.
+									 					NaN bias is less-than, the instruction 
+									 					will return -1 if any of the parameters 
+									 					is NaN.			
+Integer Conversion 	
+Instructions		int-to-long vx, vy	Converts the integer in vy						int-to-long v6, v0
+						into a long in vx,vx+1						Converts an integer in v0 into a long in v6,v7.
+
+			int-to-float vx, vy	Converts the integer in vy						int-to-float v6, v0
+						into a float in vx.						Converts the integer in v0 into a float in v6.
+
+			int-to-double vx, vy	Converts the integer in vy 						 int-to-double v6, v0
+						into the double in vx,vx+1.					Converts the integer in v0 into a double in v6,v7
+
+			int-to-byte vx,vy	Converts the int value in vy 						int-to-byte v0, v0
+						to a byte value and stores it 					Converts the integer in v0 into a byte and puts 
+						in vx.								the byte value into v0.
+
+			int-to-char vx,vy	Converts the int value in vy 						int-to-char v0, v0
+						to a char value and stores it 					Converts the integer in v0 into a char and puts 
+						in vx.								the char value into v0.
+
+			int-to-short vx,vy	Converts the int value in vy						int-to-short v0,v0
+						toa short value and stores it					Converts the integer in v0 into a short and puts
+						int vx.								the short value into v0.
+
+Add Instruction		add-int vx,vy,vz	Calculates vy+vz and puts 						add-int v0, v2, v3
+						the result into vx.						Adds v3 to v2 and puts the result into v0.
+
+Subtract Instruction	sub-int vx,vy,vz	Calculates vy-vz and puts 						sub-int v0, v2, v3
+						the result into vx.						Subtacts v3 from v2 and puts the result into v0.
+
+Multiply Instruction	mul-int vx,vy,vz	Multiplies vz with vy & puts 						mul-int v0, v2, v3
+						the result into vx.						Multiplies v2 with v2 & puts the result into v0.
+
+Division Instruction	div-int vx,vy,vz	Divides vy with vz & puts 						div-int v0, v2, v3
+						the result into vx.						Divides v2 with v3 & puts the result into v0.
+
+Shift Instructions	shl-int vx, vy, vz	Shift vy left by the positions						shl-int v2, v0, v1
+						specified by vz and store 					Shift v0 left by the positions specified by v1 
+						the result into vx.						and store the result in v2.
+
+			shr-int vx, vy, vz	Shift vy right by the positions						shr-int v2, v0, v1
+						specified by vz and store 					Shift v0 right by the positions specified by v1 
+						the result into vx.						and store the result in v2.
+
+			ushr-int vx, vy, vz	Unsigned shift right (>>>) 						ushr-int v2, v0, v1
+						vy by the positions specified 					Unsigned shift v0 right by the positions 
+						by vz and store the result 					specified by v1 and store the result in v2.
+						into vx.	
+
+						
+						
+						
+									

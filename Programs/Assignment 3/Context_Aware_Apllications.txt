@@ -1,0 +1,64 @@
+CONTEXT AWARENESS & SYSTEM CONTEXT_AWARE:
+
+Context-awareness means that one is able to use context information. A system is context-aware if it can extract, interpret and use context information and adapt its functionality to the current context of use. The challenge for such systems lies in the complexity of capturing, representing and processing contextual data. To capture context information generally some additional sensors and/or programs are required. To transfer the context information to applications and for different applications to be able to use the same context information a common representation format for such information should exist. In addition to being able to obtain the context-information, applications must include some "intelligence" to process the information and to deduce the meaning.
+
+
+FEATURES OF CONTEXT AWARE APPLICATIONS:
+
+There are features that are characteristic for context-aware applications :
+
+(A) Information and services can be presented to the user according to the current context. This includes the selection of proximate information and services, and contextual commands. An example of the previous would be information on where the closest bank is. An example of the latter would be a user interface changing commands depending on the time of the day or location.
+
+(B) Automatic execution of a service when in a certain context. This includes context-triggered actions and contextual adaptation. An example of the previous would be that when a user enters a specific room her mails would be shown on a nearby terminal. An example of the latter would be the change on volume on a phone according to the current noise level.
+
+(C) Tagging of context to information for later retrieval.
+
+
+EXAMPLES OF CONTEXT AWARE APPLICATIONS:
+
+
+3.1 Office and Meeting Tools:
+The first context-aware applications were office and meeting tools. The reason for this is that most computers are used in an office environment, and it is also easier to obtain context information, such as location, in a limited and controllable area such as an office. In this section some examples of office and meeting tools are presented.
+
+3.1.1  THE ACTIVE BADGE SYSTEM
+The Active Badge system from the Olivetti Research Lab from the beginning of the 90's is generally considered to be one of the first context-aware 	applications. With the system persons could be located in an office and calls forwarded to the closest phone. The office personnel wore badges that 	transmitted IR-signals (so-called active badges). A network of sensors placed around the office building picked up the signals and a central location server polled these sensors. The telephone receptionist could find out where a person was and direct the call to an appropriate phone. Experiments with automatic phone call forwarding were also conducted, but due to the proprietary nature of PBXs it was not possible to create a comprehensive solution.
+	
+The system also included commands to obtain the current location of a badge, to find out which other badges were in immediate proximity to a named badge, to find out which badges were currently near a specified location, to notify when a badge was again traceable, and a possibility to obtain information where the badge had been during an one-hour period.
+
+The prototype was first installed in 1990 in Olivetti Research Center in Cambridge, England. At the beginning the personnel was worried about their privacy, but actually many of them later found the phone redirection service quite valuable. The system was later installed at other local sites and at Olivetti STL, Xerox EuroParc, MIT Media Lab and Xerox PARC.
+	
+3.1.2 THE PARCTAB SYSTEM
+The ParcTab system was developed at the beginning of the 90's at the Xerox Palo Alto Research Center. The system is based on palm-sized wireless ParcTab computers and an infrared communication system that links them to each other and to desktop computers through a local area network (LAN). The system was developed to experiment with ubiquitous computing and context-awareness in an office environment.
+
+The ParcTab small wireless palm-sized computer with three finger operated buttons on the grip and a touch sensitive screen (128x64) and a speaker. It was continually connected via an infrared-based cellular network to a central server.  Each office room had a transceiver connected to the LAN communicating with the ParcTabs. The total bandwidth of one such cell was 19 200 bps. The ParcTab system could continuously know where each ParcTab was, e.g. which ones were in the same room and notify applications of location changes. The first ParcTab system was released in March 1993 having around 20 users at Xerox PARC. The year after that a new optimized version was released with approximately 40 users. 
+
+The ParcTab worked as a mobile personal digital office assistant. There were dozens of applications developed for and tested with it. Some of them were not really context-aware, including among others possibility to view emails, personal calendar information, weather information from the Internet and the local weather station. There were also several ParcTab applications implemented for context-aware experimentation. These included:
+
+(i) Presenting information about the room the user was in. The information could be shown automatically, or by user request. E.g. when the user was at the library information about the library was displayed.
+		
+(ii) Helping the user find the most convenient local resource, e.g. the nearest printer. The ParcTab could present a menu with all available printers and the distance of each of them from the users current room.
+
+(iii) Attaching a certain UNIX directory to a certain room. When the user enters the room all the files in the directory are shown. The directory is writeable by everyone, so anybody can post a note in a room by creating a file within its directory.
+
+ (iv) Locating other persons carrying a ParcTab. The location of the persons was shown a map on a desktop computer.
+
+ (v) Using the ParcTab as a remote control with different control choices in different rooms. 
+
+The ParcTab applications used following types of context: location, the presence of other mobile devices, time, nearby non-mobile machines and the state of the network file system. 
+
+3.2 (Tourist) GUIDES:
+Guides of different kind using location information are actually the commercially best covered area of all context-aware applications. Even car navigation systems using GPS can be seen as context-aware applications. Mobile phone operators have for some years now been prototyping and offering location based information services. For example, Hong Kong operator Sunday has an intelligent network (IN) based system where customers can obtain information in shopping malls based on their current location. Currently there is a boom of location-based service portals being announced for mobile phones, see for example www.myaladdin.com, and www.geeps.com. There is also a company called GeoVector announcing solutions for obtaining information about the surrounding environment.	
+
+3.2.1 CYBERGUIDE
+In the Georgia Tech Cyberguide project mobile context-aware tour-guide prototypes were built in the mid 90's. The goal was to provide information to a tourist based on her position and orientation. Initial prototypes of the Cyberguide were designed to assist visitors on a tour of the Graphics, Visualization and Usability Center during monthly open house sessions. The prototypes worked on an Apple MessagePad (with Newton OS) and used infrared beacons for positioning. The information was initially stored on the MessagePad. The user could see her current location and the demonstrators in her surroundings on a map. By selecting a demonstrator it was possible to obtain more information about it.
+
+Also an outdoor version was implemented for guidance at the Georgia Tech Campus and touring local establishments in Atlanta. The outdoor version 	used GPS for positioning. 	
+	
+3.2.2 SMART SIGHT TOURIST ASSISTANT
+In recent years a tourist assistant called Smart Sight has been developed at the Carnegie Mellon University. As also the other present guides it uses only location as context information. It is intended to translate from and to local language, handle queries posed and answer in spoken language, and be a navigational aid. The assistant is a "wearable computer" (consisting of a Xybernaut MAIV and a Thinkpad 600) with microphone, earphone, video camera, and GPS to determine users location. Two applications were in development in 1999, requesting information of close by landmarks and a possibility for tourists to store information about places they find interesting.
+
+3.3 Memory Aids
+Humans remember things by associating them to the current context, e.g. when, where and with whom something happened. There have been experiments to develop memory aids using the users current context. As will be shown in the examples below the context of the user can be a valuable key for indexing information in order to help the user retrieving information later or for showing information related to his current context.
+
+3.3.1 REMEMBRANCE AGENT
+In 1996 Rhodes at MIT Media Lab developed a wearable remembrance agent. It is a continuously running proactive memory aid that uses the physical context of a wearable computer to provide notes that might be relevant in the user's current context. It displays one-line summaries of note-files, old email, papers, and other text information that might be relevant to the user's current context. The summaries are listed in the bottom few-lines of a heads-up display. The Remembrance agent uses five kinds of context: wearer's physical location, people who are currently around, subject field, date and time-stamp, and the body of the note.

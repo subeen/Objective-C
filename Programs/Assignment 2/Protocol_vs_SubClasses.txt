@@ -1,0 +1,63 @@
+DIFFERENCE BETWEEN PROTOCOLS AND SUBCLASSING
+
+Protocols are used to declare the methods which are to be used for a particular situation.A class conforms to a protocol only when the class has implemented ALL the required methods of the protocol.Thus,it ensures that a certain form of method template is implemented.
+   Subclassing is used when a class needs to inherit certain properties and behaviour from its parent class.The child class also has the opportunity to either define its own additional behavior or override the behavior it inherited from the parent.
+
+A protocol is a group of related properties and methods that can be implemented by any class.
+ A class is a group of properties and methods that is suitable to be used by itself and its child classes only.
+
+Protocols are used to indicate indicate non-hierarchical similiarities between classes.
+   Subclassing is used to indicate a hierarchical relationship between  the parent and the child class.
+Protocols are more flexible than a normal class interface, since they let you reuse a single API declaration in completely unrelated classes. This makes it possible to represent horizontal relationships.
+  
+A protocol is used to declare methods and properties that are independent of any specific class.
+   In contrast,classes are used to declare methods and properties associated with only that class.
+
+Protocols do not have any variables associated with them and hence a class conforming to it will not have access to any additional variables.
+   Subclassing gives you access to the parent's variables also.
+
+
+
+ 					SUBCLASS
+  
+
+Example:-
+
+@interface parentClass : NSObject
+{
+}
+@end
+@interface subClass : parentClass
+{
+}
+@end
+
+Here,subClass inherits from parentClass.					
+
+
+					 PROTOCOL 
+                                    
+
+
+Syntax to declare a protocol:
+
+@protocol ProjectRule
+
+-(void)Project_Delivery;
+-(void)Project_Analysis_and_Design
+@end
+
+
+
+Syntax to implement a protocol:
+
+@interface ProjectManager: NSObject <ProjectRule>
+{
+}
+@end
+
+
+
+
+
+                                               
